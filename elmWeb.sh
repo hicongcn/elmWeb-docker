@@ -120,7 +120,7 @@ DOCKER_UP() {
     cd /etc/elmWeb || exit
 
     if [ ! -f "/etc/elmWeb/docker-compose.yml" ]; then
-        wget https://ghproxy.com/https://raw.githubusercontent.com/zelang/elmWeb-docker/main/docker-compose.yml -O /etc/elmWeb/docker-compose.yml >/dev/null 2>&1
+        wget https://ghproxy.com/https://raw.githubusercontent.com/hicongcn/elmWeb-docker/main/docker-compose.yml -O /etc/elmWeb/docker-compose.yml >/dev/null 2>&1
         # shellcheck disable=SC2181
         if [ $? -ne 0 ]; then
           echo -e "${Green} [×] 资源下载失败，请重试。 ${Font}" && exit 1
@@ -142,7 +142,7 @@ main(){
     if [ ! -d "/etc/elmWeb" ]; then
       mkdir /etc/elmWeb
     fi
-    wget https://ghproxy.com/https://raw.githubusercontent.com/zelang/elmWeb-docker/main/config.ini -O /etc/elmWeb/config.ini >/dev/null 2>&1
+    wget https://ghproxy.com/https://raw.githubusercontent.com/hicongcn/elmWeb-docker/main/config.ini -O /etc/elmWeb/config.ini >/dev/null 2>&1
     # shellcheck disable=SC2181
     if [ $? -ne 0 ]; then
       echo -e "${Green} [×] 资源下载失败，请重试。 ${Font}" && exit 1
